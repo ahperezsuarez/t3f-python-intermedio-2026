@@ -62,7 +62,7 @@ def calcular_promedio(*args):
 
 def error_de_argumento(arg, *args):
     print("5) Capturar error al no ingresar suficientes argumentos:")
-    resultado = f"El argumento mandatorio es {arg} y los opcionales son {args} y los argumentos clave-valor son {}. \n"
+    resultado = f"El argumento mandatorio es {arg} y los opcionales son {args}. \n"
     return resultado
 
 
