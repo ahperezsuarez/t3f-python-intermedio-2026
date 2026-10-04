@@ -25,7 +25,7 @@ def calcular_mayor():
         resultado = "Los valores son iguales \n" if numero_1 == numero_2 else (f"El primer valor es mayor: {numero_1} \n" if numero_1 > numero_2 else f"El segundo valor es mayor: {numero_2}\n")
         return resultado
     except ValueError:
-        print("ERROR: solo se pueden ingresar numeros \n")
+        return "ERROR: solo se pueden ingresar numeros \n"
 
 def buscar_palabra(*args):
     print("2) Buscar palabra: ")
@@ -43,7 +43,7 @@ def es_par():
         resultado = "El numero es par.\n" if numero % 2 == 0 else "El numero es impar\n "
         return resultado
     except ValueError:
-        print("ERROR: solo se pueden ingresar numeros \n")
+        return "ERROR: solo se pueden ingresar numeros \n"
 
 
 def calcular_promedio(*args):
@@ -55,13 +55,14 @@ def calcular_promedio(*args):
         resultado = f"El promedio es: {float(total/len(args))}\n"
         return resultado
     except ValueError:
-        print("ERROR: solo se pueden evaluar numeros.\n")
+        return "ERROR: solo se pueden evaluar numeros.\n"
     except ZeroDivisionError:
-        print("ERROR: no se enviaron numeros para evaluar.\n")
+        return "ERROR: no se enviaron numeros para evaluar.\n"
 
-def error_de_argumento(arg):
+
+def error_de_argumento(arg, *args):
     print("5) Capturar error al no ingresar suficientes argumentos:")
-    resultado = f"El argumento es {arg}. \n"
+    resultado = f"El argumento mandatorio es {arg} y los opcionales son {args} y los argumentos clave-valor son {}. \n"
     return resultado
 
 
