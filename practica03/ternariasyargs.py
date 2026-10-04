@@ -49,15 +49,14 @@ def es_par():
 def calcular_promedio(*args):
     print("4) Calcular promedio: ")
     try:
-        total=0
-        for arg in args:
-            total += arg
-        resultado = f"El promedio es: {float(total/len(args))}\n"
+        resultado = (
+            f"El promedio es {sum(args)/len(args)}\n"
+            if len(args) > 0
+            else "ERROR: no se enviaron numeros para evaluar.\n"
+        )
         return resultado
     except ValueError:
         return "ERROR: solo se pueden evaluar numeros.\n"
-    except ZeroDivisionError:
-        return "ERROR: no se enviaron numeros para evaluar.\n"
 
 
 def error_de_argumento(arg, *args):
