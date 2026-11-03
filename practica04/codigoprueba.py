@@ -22,7 +22,7 @@ ahorro.aplicar_interes()
 print("\n--- PRUEBA DE LECTURA Y PROTECCIÓN (@property) ---")
 print(f"Saldo consultado: ${ahorro.saldo}")
 #ahorro.saldo = -500  # Descomentar para verificar que arroja ValueError
-ahorro.cbu = "999"   # Descomentar para verificar que arroja AttributeError (solo lectura)
+#ahorro.cbu = "999"   # Descomentar para verificar que arroja AttributeError (solo lectura)
 
 print("\n--- ESTADO FINAL ---")
 for c in cuentas:
